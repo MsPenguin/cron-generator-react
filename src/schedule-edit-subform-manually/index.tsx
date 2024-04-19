@@ -1,7 +1,9 @@
+import React from "react";
 import {
   Box,
   IconButton,
   InputAdornment,
+  Stack,
   TextField,
   Tooltip,
 } from "@mui/material";
@@ -13,14 +15,17 @@ import CustomPopover from "./components/custom-popover";
 export default function ScheduleSubEditManually() {
   const inputPopover = usePopover();
   const helpPopover = usePopover();
+  const [value, setValue] = React.useState("");
 
   return (
-    <>
-      <Box width={1} display={"flex"} alignItems={"center"} gap={1}>
+    <Stack width={640}>
+      <Box display={"flex"} alignItems={"center"} gap={1}>
         <TextField
           name="crontab"
           label="Crontab"
           autoComplete="off"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
@@ -40,7 +45,7 @@ export default function ScheduleSubEditManually() {
           </Tooltip>
         </Box>
       </Box>
-      <CrontabGenerator inputPopover={inputPopover} />
+      <CrontabGenerator inputPopover={inputPopover} setValue={setValue} />
       <CustomPopover
         open={helpPopover.open}
         onClose={helpPopover.onClose}
@@ -50,7 +55,7 @@ export default function ScheduleSubEditManually() {
           <Box component={"code"}>{helpText}</Box>
         </Box>
       </CustomPopover>
-    </>
+    </Stack>
   );
 }
 

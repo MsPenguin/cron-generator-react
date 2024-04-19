@@ -8,7 +8,7 @@ import {
   ThemeOptions,
 } from "@mui/material/styles";
 // components
-import { useSettingsContext } from "./../components/settings";
+import { useSettingsContext } from "../schedule-edit-subform-manually/components/settings";
 // system
 import { palette } from "./palette";
 import { shadows } from "./shadows";

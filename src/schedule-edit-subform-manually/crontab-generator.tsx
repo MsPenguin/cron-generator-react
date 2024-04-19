@@ -66,8 +66,10 @@ const crontabReducer = (state: CronInputType, action: CronInputActionType) => {
 
 export default function CrontabGenerator({
   inputPopover,
+  setValue,
 }: {
   inputPopover: ReturnType<typeof usePopover>;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
 }) {
   const [currentField, setCurrentField] =
     React.useState<keyof CronInputType>("minute");
@@ -211,6 +213,7 @@ export default function CrontabGenerator({
             color="success"
             onClick={() => {
               onGeneratorClose();
+              setValue(result);
             }}
           >
             확인

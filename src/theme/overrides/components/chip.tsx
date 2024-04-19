@@ -1,8 +1,8 @@
 import { alpha, Theme } from "@mui/material/styles";
 import { ChipProps, chipClasses } from "@mui/material/Chip";
+import { ColorSchema } from "../../palette";
+import { Icon } from "@iconify/react";
 // components
-import Iconify from "src/components/iconify";
-import { ColorSchema } from "src/theme/palette";
 
 // ----------------------------------------------------------------------
 
@@ -137,7 +137,7 @@ export default function Chip(theme: Theme) {
   return {
     MuiChip: {
       defaultProps: {
-        deleteIcon: <Iconify icon="solar:close-circle-bold" />,
+        deleteIcon: <Icon icon="solar:close-circle-bold" />,
       },
 
       styleOverrides: {

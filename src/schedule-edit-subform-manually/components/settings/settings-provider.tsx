@@ -1,7 +1,7 @@
 import isEqual from "lodash/isEqual";
 import { useEffect, useMemo, useCallback, useState } from "react";
 // hooks
-import { useLocalStorage } from "../../hooks/use-local-storage";
+import { useLocalStorage } from "../../hooks";
 // utils
 import { localStorageGetItem } from "../../utils/storage-available";
 //

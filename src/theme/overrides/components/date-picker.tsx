@@ -1,7 +1,7 @@
 import { Theme } from "@mui/material/styles";
 import { buttonClasses } from "@mui/material/Button";
+import { Icon } from "@iconify/react";
 // components
-import Iconify from "./../../../components/iconify";
 
 // ----------------------------------------------------------------------
 
@@ -23,21 +23,17 @@ const timeList = [
   "DesktopTimePicker",
 ];
 
-const switchIcon = () => <Iconify icon="mdi:chevron-down" width={24} />;
+const switchIcon = () => <Icon icon="mdi:chevron-down" width={24} />;
 
-const leftIcon = () => <Iconify icon="mdi:chevron-left" width={24} />;
+const leftIcon = () => <Icon icon="mdi:chevron-left" width={24} />;
 
-const rightIcon = () => (
-  <Iconify icon="mdi:chevron-right" width={24} />
-);
+const rightIcon = () => <Icon icon="mdi:chevron-right" width={24} />;
 
 const calendarIcon = () => (
-  <Iconify icon="solar:calendar-mark-bold-duotone" width={24} />
+  <Icon icon="solar:calendar-mark-bold-duotone" width={24} />
 );
 
-const clockIcon = () => (
-  <Iconify icon="solar:clock-circle-outline" width={24} />
-);
+const clockIcon = () => <Icon icon="solar:clock-circle-outline" width={24} />;
 
 const desktopTypes = dateList.reduce(
   (result: Record<string, any>, currentValue) => {

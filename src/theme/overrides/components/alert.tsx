@@ -1,8 +1,7 @@
 import { Theme, alpha } from "@mui/material/styles";
 import { AlertProps, alertClasses } from "@mui/material/Alert";
+import { Icon } from "@iconify/react";
 // components
-import Iconify from "./../../../components/iconify";
-import React from "react";
 
 // ----------------------------------------------------------------------
 
@@ -54,10 +53,10 @@ export default function Alert(theme: Theme) {
     MuiAlert: {
       defaultProps: {
         iconMapping: {
-          error: <Iconify icon="solar:danger-bold" width={24} />,
-          info: <Iconify icon="eva:info-fill" width={24} />,
-          success: <Iconify icon="eva:checkmark-circle-2-fill" width={24} />,
-          warning: <Iconify icon="eva:alert-triangle-fill" width={24} />,
+          error: <Icon icon="solar:danger-bold" width={24} />,
+          info: <Icon icon="eva:info-fill" width={24} />,
+          success: <Icon icon="eva:checkmark-circle-2-fill" width={24} />,
+          warning: <Icon icon="eva:alert-triangle-fill" width={24} />,
         },
       },
 
